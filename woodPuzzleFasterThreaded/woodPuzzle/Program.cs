@@ -19,8 +19,7 @@ namespace woodPuzzle
         public static void Main(string[] args)
         {
             // Start the timer
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+            Stopwatch stopwatch = Stopwatch.StartNew();
 
             // Go!
             Console.WriteLine("Program starting at {0}.", DateTime.Now.ToLongTimeString());
@@ -31,7 +30,7 @@ namespace woodPuzzle
             // End time
             stopwatch.Stop();
             Console.WriteLine("Program ending at {0}.", DateTime.Now.ToLongTimeString());
-            Console.WriteLine($"Total program time was {stopwatch.Elapsed} seconds.");
+            Console.WriteLine("Total program time was {0:hh\\:mm\\:ss}", stopwatch.Elapsed);
 
             Console.WriteLine("Press Enter to exit.");
             Console.ReadLine();
