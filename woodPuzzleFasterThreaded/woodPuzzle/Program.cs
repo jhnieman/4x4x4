@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace woodPuzzle
@@ -17,16 +18,23 @@ namespace woodPuzzle
 
         public static void Main(string[] args)
         {
-            // Start time
-            System.Console.WriteLine("Program starting at {0}.", System.DateTime.Now.ToLongTimeString());
+            // Start the timer
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            // Go!
+            Console.WriteLine("Program starting at {0}.", DateTime.Now.ToLongTimeString());
 
             // Solve it!
             BlockPuzzle.Solve(BlockOrder);
 
             // End time
-            System.Console.WriteLine("Program ending at {0}.", System.DateTime.Now.ToLongTimeString());
+            stopwatch.Stop();
+            Console.WriteLine("Program ending at {0}.", DateTime.Now.ToLongTimeString());
+            Console.WriteLine($"Total program time was {stopwatch.Elapsed} seconds.");
 
-            System.Console.ReadLine();
+            Console.WriteLine("Press Enter to exit.");
+            Console.ReadLine();
         }
     }
 
@@ -110,7 +118,7 @@ namespace woodPuzzle
             Console.WriteLine("Solution #{0} for starting point: {1}, {2}, {3} at {4}",
                 this.SolutionCount,
                 this.StartingPoint.XPos, this.StartingPoint.YPos, this.StartingPoint.ZPos,
-                System.DateTime.Now.ToLongTimeString());
+                DateTime.Now.ToLongTimeString());
 
             foreach (BlockLine blockLine in this.BlockLineList)
             {
@@ -173,8 +181,8 @@ namespace woodPuzzle
                 bool solutionFound = false;
 
                 // Start time
-                System.Console.WriteLine("Beginning pass with start point {0}, {1}, {2} at {3}. ====================",
-                    startingPoint.XPos, startingPoint.YPos, startingPoint.ZPos, System.DateTime.Now.ToLongTimeString());
+                Console.WriteLine("Beginning pass with start point {0}, {1}, {2} at {3}. ====================",
+                    startingPoint.XPos, startingPoint.YPos, startingPoint.ZPos, DateTime.Now.ToLongTimeString());
 
                 // Set up the block puzzle object for this thread
                 BlockPuzzle blockPuzzle = new BlockPuzzle(blockLineOrder);
@@ -249,9 +257,9 @@ namespace woodPuzzle
                 blockPuzzle.TheGrid[blockPuzzle.StartingPoint.XPos, blockPuzzle.StartingPoint.YPos, blockPuzzle.StartingPoint.ZPos] = false;
 
                 // End time
-                System.Console.WriteLine("Ending pass with start point {0}, {1}, {2} at {3}. {4} positions tried.======",
+                Console.WriteLine("Ending pass with start point {0}, {1}, {2} at {3}. {4} positions tried.======",
                     startingPoint.XPos, startingPoint.YPos, startingPoint.ZPos,
-                    System.DateTime.Now.ToLongTimeString(),
+                    DateTime.Now.ToLongTimeString(),
                     blockPuzzle.PositionCount);
             });
         }
