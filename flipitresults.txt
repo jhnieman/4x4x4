@@ -1,0 +1,22 @@
+Program starting at 8:50:32 AM.
+Beginning pass with start point 0, 0, 0 at 8:50:32 AM. ====================
+Beginning pass with start point 0, 1, 0 at 8:50:32 AM. ====================
+Beginning pass with start point 1, 1, 0 at 8:50:32 AM. ====================
+Beginning pass with start point 1, 1, 1 at 8:50:32 AM. ====================
+Ending pass with start point 1, 1, 1 at 8:52:14 AM. 172056330 positions tried.======
+Ending pass with start point 0, 0, 0 at 8:53:10 AM. 288446082 positions tried.======
+Ending pass with start point 1, 1, 0 at 8:53:36 AM. 390453410 positions tried.======
+Ending pass with start point 0, 1, 0 at 8:54:03 AM. 460802042 positions tried.======
+Program ending at 8:54:03 AM.
+
+
+Program starting at 8:54:03 AM.
+Beginning pass with start point 0, 0, 0 at 8:54:03 AM. ====================
+Beginning pass with start point 0, 1, 0 at 8:54:03 AM. ====================
+Beginning pass with start point 1, 1, 0 at 8:54:03 AM. ====================
+Beginning pass with start point 1, 1, 1 at 8:54:03 AM. ====================
+Ending pass with start point 1, 1, 1 at 8:54:03 AM. 30 positions tried.======
+Ending pass with start point 1, 1, 0 at 8:57:53 AM. 466627226 positions tried.======
+Ending pass with start point 0, 1, 0 at 9:04:34 AM. 1736563086 positions tried.======
+Ending pass with start point 0, 0, 0 at 9:06:25 AM. 2224632642 positions tried.======
+Program ending at 9:06:25 AM.
